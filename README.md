@@ -3,6 +3,24 @@ A helper library for rendering sprites made in Aseprite to an HTML Canvas.
 
 The code is fairly well documented, so check out the source file for comments for how to use it.
 
+# Getting set up
+You can grab a standalone, minified version of the library from the [releases](https://github.com/Jezzamonn/aseprite-js/releases/) tab.
+
+Or you can clone this repo and install via `npm`:
+
+```sh
+# in the directory of the cloned repo
+npm link
+
+# in the directory of the place you want to use it
+npm link aseprite-js
+```
+
+Then, in your JS file, import as such
+```js
+import Aseprite from 'aseprite-js';
+```
+
 # Basic Usage
 ```js
 // Load the animation file.
@@ -23,7 +41,7 @@ Aseprite.drawAnimation({
   image: 'stick-figure',
   animationName: 'Idle',
   time: elapsedSeconds, // Or you can use `Date.now() / 1000` if you don't want to track elapsed time.
-  dest: { x: 100, y: 100 },
+  position: { x: 100, y: 100 },
   scale: 2,
   anchorRatios: { x: 0.5, y: 1 }, // This sets the anchor point to the bottom middle of the sprite.
 });
@@ -34,7 +52,7 @@ Aseprite.drawSprite({
   image: 'stick-figure',
   frame: 0, // Frame numbers are 0-based, so this is the first frame.
   time: elapsedSeconds + 0.5,
-  dest: { x: 20, y: 20 },
+  position: { x: 20, y: 20 },
   scale: 2,
 });
 ```
