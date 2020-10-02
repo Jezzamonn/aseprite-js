@@ -24,12 +24,11 @@ import Aseprite from 'aseprite-js';
 # Basic Usage
 ```js
 // Load the animation file.
+// In this case, the spritesheet is located at assets/stick-figure.png,
+// with a corresponding metadata file at assets/stick-figure.json.
 Aseprite.loadImage({
   name: 'stick-figure',
-  imagePath:
-    'https://cdn.glitch.com/960f28b9-fe45-494e-aff5-10cd203b982a%2Fstick-figure.png?v=1601614303717',
-  jsonPath:
-    'https://cdn.glitch.com/960f28b9-fe45-494e-aff5-10cd203b982a%2Fstick-figure.json?v=1601614335000',
+  basePath: 'assets/',
 });
 
 // Turn off smoothing so the pixels stay sharp.
