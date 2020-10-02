@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
     module: {
@@ -14,7 +13,7 @@ module.exports = {
     stats: {
         colors: true
     },
-    mode: 'development',
+    mode: 'production',
     entry: './src/aseprite-loader.js',
     output: {
         path: path.resolve(__dirname, 'build'),

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Helper library for rendering sprites made in Aseprite to an HTML Canvas.",
   "scripts": {
-    "webpack": "webpack"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
