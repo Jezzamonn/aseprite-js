@@ -1,7 +1,9 @@
 # aseprite-js
 A helper library for rendering sprites made in Aseprite to an HTML Canvas.
 
-The code is fairly well documented, so check out the source file for comments for how to use it.
+![example gif](promo/example.gif)
+
+The code is fairly well documented, so check out the [src/aseprite-js.js](src/aseprite-js.js) for comments for how to use it.
 
 # Getting set up
 You can grab a standalone, minified version of the library from the [releases](https://github.com/Jezzamonn/aseprite-js/releases/) tab.
