@@ -147,11 +147,11 @@ export function loadImage({name, basePath=null, imagePath=null, jsonPath=null}) 
  * @param {!Object} p - Input to this function, as an object.
  * @param {!CanvasRenderingContext2D} p.context - The context of the canvas to
  *     draw on.
- * @param {string|ImageMetadata} p.image - The name, or image metadata of
- *     the spritesheet to draw.
+ * @param {string|ImageMetadata} p.image - The name, or image metadata of the
+ *     spritesheet to draw.
  * @param {number} p.frame - The frame number to draw.
- * @param {{x: number, y: number}} p.dest - The position on the canvas to draw
- *     this sprite
+ * @param {{x: number, y: number}} p.position - The position on the canvas to
+ *     draw this sprite
  * @param {number} p.scale - How much to upscale the sprite. Should be an
  *     integer.
  * @param {{x: number, y: number}} p.anchorRatios - The relative position of the
@@ -164,7 +164,7 @@ export function drawSprite({
     context,
     image,
     frame,
-    dest,
+    position,
     scale = 1,
     anchorRatios = {
         x: 0,
@@ -186,8 +186,8 @@ export function drawSprite({
         sourceRect.y,
         sourceRect.w,
         sourceRect.h,
-        Math.round(dest.x - anchorRatios.x * scale * sourceRect.w),
-        Math.round(dest.y - anchorRatios.y * scale * sourceRect.h),
+        Math.round(position.x - anchorRatios.x * scale * sourceRect.w),
+        Math.round(position.y - anchorRatios.y * scale * sourceRect.h),
         scale * sourceRect.w,
         scale * sourceRect.h);
 }
@@ -205,7 +205,7 @@ export function drawSprite({
  * @param {number} p.animationName - The name of the animation.
  * @param {number} p.time - The position of this animation in time, relative to
  *     the start. In seconds. Determines which frame to render.
- * @param {{x: number, y: number}} p.dest - The position on the canvas to draw
+ * @param {{x: number, y: number}} p.position - The position on the canvas to draw
  *     this sprite
  * @param {number} p.scale - How much to upscale the sprite. Should be an
  *     integer.
@@ -220,7 +220,7 @@ export function drawAnimation({
     image,
     animationName,
     time,
-    dest,
+    position,
     scale = 1,
     anchorRatios = {
         x: 0,
@@ -241,7 +241,7 @@ export function drawAnimation({
         context,
         image,
         frame,
-        dest,
+        position,
         scale,
         anchorRatios
     });

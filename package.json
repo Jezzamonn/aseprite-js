@@ -2,6 +2,7 @@
   "name": "aseprite-js",
   "version": "1.0.0",
   "description": "Helper library for rendering sprites made in Aseprite to an HTML Canvas.",
+  "main": "src/aseprite-js.js",
   "scripts": {
     "build": "webpack"
   },
