@@ -14,7 +14,7 @@ module.exports = {
         colors: true
     },
     mode: 'production',
-    entry: './src/aseprite-loader.js',
+    entry: './src/standalone.js',
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'aseprite-loader.bundle.js'
