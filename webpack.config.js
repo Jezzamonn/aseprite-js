@@ -17,7 +17,7 @@ module.exports = {
     entry: './src/standalone.js',
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'aseprite-loader.bundle.js'
+        filename: 'aseprite-js.bundle.js'
     },
     devtool: 'source-map'
 }

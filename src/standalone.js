@@ -1,3 +1,3 @@
-const Aseprite = require("./aseprite-loader");
+const Aseprite = require("./aseprite-js");
 
 window.Aseprite = Aseprite;
